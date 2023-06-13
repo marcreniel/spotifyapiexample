@@ -6,6 +6,7 @@ const scope = 'user-top-read, user-read-private, user-read-email'
 export const authOptions = {
     secret: process.env.NEXTAUTH_SECRET,
     providers: [
+        process.env.VERCEL_ENV === "preview",
         SpotifyProvider({
           clientId: process.env.SPOTIFY_CLIENT_ID,
           clientSecret: process.env.SPOTIFY_CLIENT_SECRET,

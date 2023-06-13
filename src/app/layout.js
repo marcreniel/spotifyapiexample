@@ -9,7 +9,7 @@ export const metadata = {
 }
 
 async function getSession(cookie) {
-  const response = await fetch(`http://localhost:3000/api/auth/session`, {
+  const response = await fetch(`https://spotifyapiexample.vercel.app/api/auth/session`, {
     headers: {
       cookie,
     },
