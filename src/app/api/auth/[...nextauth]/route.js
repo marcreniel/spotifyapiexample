@@ -4,7 +4,7 @@ import SpotifyProvider from "next-auth/providers/spotify";
 const scope = 'user-top-read, user-read-private, user-read-email'
 
 export const authOptions = {
-    secret: process.env.JWT_TOKEN,
+    secret: process.env.NEXTAUTH_SECRET,
     providers: [
         SpotifyProvider({
           clientId: process.env.SPOTIFY_CLIENT_ID,
